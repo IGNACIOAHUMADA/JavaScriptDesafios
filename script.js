@@ -1,6 +1,6 @@
 let usuario;
 let pedido;
-let cuentaUsuario = 5;
+let cuentaUsuario = 1;
 
 
 class Usuario {
