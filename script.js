@@ -80,3 +80,24 @@ switch (productosSeleccionados) {
     break;
 }
 
+for(const saludo of arrayDatosUsuario){
+    let contenedor = document.createElement("h2");
+    let contenedorTitulo = document.createElement("h3");
+
+    contenedor.innerHTML = `<h2> Hola ${saludo.nombre} ${saludo.apellido}, en que podemos ayudarlo?<h2>`;
+    contenedorTitulo.innerHTML = `<h3>Nuestros productos son:</h3>`
+    document.body.appendChild(contenedor);
+    document.body.appendChild(contenedorTitulo);
+}
+
+for (const producto of tienda) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `
+                            <div style="border: 1px solid;">
+                            <p>  Producto: <b>${producto.nombre}</b></p>
+                            <b> $ ${producto.precio}</b>
+                            <br>
+                            <button>COMPRAR</button></div>`;
+    document.body.appendChild(contenedor);
+    
+}
