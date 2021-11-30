@@ -1,0 +1,54 @@
+
+/* NOSOTROS******** */
+.infoNosotros{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.infoNosotros_carta1{
+    width: 50%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:left;
+    min-width: 200px;
+    background-color:#fab8c5c2;
+    border-radius: 5%;
+    padding: 25px;
+    margin: 20px;
+}
+.infoNosotros_carta2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    flex: 1;
+    min-width: 200px;
+    background-color:#5e3e222c;
+    border-radius: 5%;
+    padding: 25px;
+    margin: 20px;
+}
+.infoNosotros_titulo1{ 
+    display: flex;
+    justify-content: left;
+}
+.infoNosotros_titulo2{
+    display: flex;
+    justify-content:left;
+}
+.infoNosotros_texto1{
+    display: flex;
+    justify-content: left;
+    
+}
+.infoNosotros_texto2{
+    display: flex;
+    justify-content: left;
+}
+.infoNosotros h2{
+    text-decoration:underline $brown 1.5px;
+}
+

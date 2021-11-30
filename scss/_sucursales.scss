@@ -1,0 +1,35 @@
+
+/* SUCURSALES******** */
+.sucursalesUno{
+    display: ruby-text;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+.padre{
+    width: 100%;
+}
+.direcciones{
+    width: 100%;
+    display: block;
+    padding: 50px;
+}
+.maps{
+    border-radius: 50px;
+    width: 100%;
+}
+
+.direcciones_2{
+    @extend .direcciones;
+}
+.direcciones_titulo1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.direcciones_titulo2{
+    @extend .direcciones_titulo1;
+    justify-content: center;
+    color: black;
+}

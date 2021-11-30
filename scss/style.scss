@@ -1,0 +1,163 @@
+@import "variables";
+@import "index";
+@import "productos";
+@import "contacto";
+@import "catering";
+@import "nosotros";
+@import "sucursales";
+
+// variables 
+$pink:#F9D1D9;
+$rosa_op:#f9d2da66;
+$pink_op2:#fcd0d9ab;
+$brown:#5E3E22;
+$white:#f8f9fa;
+$negro: #1f1f1f;
+
+$redes:(
+    instagram:#C13584,
+    facebook:#3a5795,
+    whatsapp:#42b72a
+);  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: georama;
+}
+/* HEADER *********** */
+body{
+    background-color: $pink;
+}
+/* barra de navegacion */
+.navbar-light .navbar-nav .nav-link.active:hover {
+    color:$negro;
+    background-color: $rosa_op;
+    border-radius: 20rem;
+}
+.navbar-brand{
+    width: 150px;
+}
+.loguito{
+    width: 225px;
+}
+#navegacion{
+    width: 100%;
+    height: 50%;
+    
+}
+h1{
+    color: $brown;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    font-size: 2rem;
+}
+main h2, h3{
+    color: $brown;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+/* FOOTER**** */
+footer{
+    text-align:center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to bottom,$pink,rgba(255, 255, 255, 0.842) );
+}
+footer .redSocial{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    
+}
+.footerInc{
+    color: rgba(128, 128, 128, 0.733);
+}
+.border-boton{
+    border-bottom: 1px solid #3d4042!important;
+}
+.text-mute {
+    --bs-text-opacity: 1;
+    color: #3d4042!important;
+}
+.redSocial a{
+    padding: 10px;
+}
+
+.redSocial a :hover{
+    background-color: $pink;
+    color: $brown;
+    border-radius: 30%;
+}
+.redesSociales{
+    color: black;
+}
+
+
+/* Media Q ********/
+
+@media only screen and (min-width:250px) and (max-width:399px){
+    h1{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    .infoNosotros section h2{
+        font-size: 1rem;
+    }
+    .infoNosotros section p{
+        font-size: 0.9rem;
+    }
+    .direcciones{
+        padding: 25px;
+    }
+    .direcciones_titulo1{
+        font-size: 1rem;
+    }
+    .card{
+        border: none;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:767px){
+    h1{
+        font-size: 1.2rem;
+    }
+    h3{
+        font-size: 0.5rem;
+    }
+    .infoNosotros section h2{
+        font-size: 1rem;
+    }
+    .infoNosotros section p{
+        font-size: 0.9rem;
+    }
+    .direcciones{
+        padding: 25px;
+    }
+    .direcciones_titulo1{
+        font-size: 1rem;
+    }
+    .card{
+        border: none;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:940px){
+    .infoNosotros section h2{
+        font-size: 1.3rem;
+    }
+    .card{
+        border: none;
+    }
+
+}
+@media only screen and (min-width:939px) and (max-width:1024px){
+
+}

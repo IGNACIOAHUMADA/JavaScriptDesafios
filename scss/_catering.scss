@@ -1,0 +1,25 @@
+
+/*  CATERING******** */
+.carousel{
+    width: 80%;
+    height: 25%;
+}
+.contenedorCar{
+    display: flex;
+    justify-content: center;
+}
+.acordeon{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.accordion{
+    width: 90%;
+}
+.accordion-button:not(.collapsed){
+    color:#5E3E22;
+    background-color:#f9d2da66;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.1rem $pink_op2;
+}

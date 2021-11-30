@@ -1,0 +1,23 @@
+
+.formulario{
+    width: 95%;
+    margin: 10px;
+}
+.form-select:focus {
+    border-color: $negro;
+    box-shadow: 0 0 0 0.1rem $negro;
+}
+.form-control:focus{
+    border-color: $negro;
+    box-shadow: 0 0 0 0.1rem $negro;
+}
+.btn-primary {
+    color:$white;
+    background-color: $negro;
+    border-color: $negro;
+}
+.btn-primary:hover{
+    background-color:$white;
+    color:$brown;
+    border-color: $negro;
+} 

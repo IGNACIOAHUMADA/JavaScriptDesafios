@@ -1,0 +1,19 @@
+.card{
+    border: none;
+}
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cardUno{
+    display: flex;
+    flex: 1;
+    min-width: 350px;
+}
+.cardDos{
+    display: flex;
+    flex: 1;
+    min-width: 350px;
+}

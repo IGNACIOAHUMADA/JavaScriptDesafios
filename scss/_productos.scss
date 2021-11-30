@@ -1,0 +1,19 @@
+h3 {
+    font-size: 1.5rem;
+}
+
+/* .contenedor {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+} */
+
+.cardProductos {
+    padding-top: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-width: 250px;
+}
