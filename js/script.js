@@ -42,9 +42,6 @@ tienda.push(new Productos("04", "Tabletas", "300","../imagenes/tabletas.jpeg",15
 for (const Productos of tienda) {
     Productos.sumaIva();
 }
-tienda.sort((a, b) => {
-    return a.precio - b.precio;
-});
 
 
 
@@ -81,14 +78,16 @@ function comprarProductos(producto) {
     const compraTotal = document.getElementById('compraTotal');
     compraTotal.innerHTML = total;
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    
+
 }
 
 function cargarLocalStorage() {
     let shop = JSON.parse(localStorage.getItem('carrito'))
+    localStorage.setItem('carrito', shop)
     if (shop) {
         for (let i = 0; i < shop.length; i++) {
-            carrito.push(new Producto(shop[i].idProducto, shop[i].nombre, shop[i].precio, shop[i].stock, shop[i].cantidad))
+            carrito.push(new Productos(shop[i].idProducto, shop[i].nombre, shop[i].precio, shop[i].stock, shop[i].cantidad))
         }
     }
+    
 }
