@@ -86,8 +86,16 @@ function cargarLocalStorage() {
     localStorage.setItem('carrito', shop)
     if (shop) {
         for (let i = 0; i < shop.length; i++) {
-            carrito.push(new Productos(shop[i].idProducto, shop[i].nombre, shop[i].precio, shop[i].stock, shop[i].cantidad))
+            carrito.push(new Productos(shop[i].idProducto, shop[i].nombre, shop[i].precio, shop[i].imagen,shop[i].stock, shop[i].cantidad))
         }
+        let total = 0;
+        for (let i = 0; i < carrito.length; i++) {
+            total += carrito[i].cantidad;
+        }
+        const compraTotal = document.getElementById('compraTotal');
+        compraTotal.innerHTML = total;
+        localStorage.setItem('carrito', JSON.stringify(carrito));
     }
-    
 }
+
+cargarLocalStorage();
