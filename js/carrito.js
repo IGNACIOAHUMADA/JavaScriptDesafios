@@ -2,7 +2,7 @@
 $(() => {
     let carrito = []
     let dataCarrito = localStorage.getItem("carrito");
-
+    
     if(dataCarrito) carrito = JSON.parse(dataCarrito)
 
     let stringHTML = "<div class='cardProductos'>";
@@ -15,9 +15,12 @@ $(() => {
             <p class="card-text">Unidades seleccionadas(${data.cantidad})</p>
             <p class="card-text">Productos disponibles(${data.stock})</p>
             <p class="card-text"><b>$ ${data.precio}</b></p>
+            <button id="${data.idProducto}" class="btn btn-primary delete">🗑️</button>
         </div>
     </div>`
     }
     stringHTML += "</div>"
     $("#seleccionProductos").html(stringHTML)
 })
+
+

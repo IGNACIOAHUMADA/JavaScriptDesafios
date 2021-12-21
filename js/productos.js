@@ -7,17 +7,6 @@ const tienda = [];
 const prodcutosSeleccionados = [];
 const contenedorPadre = document.getElementById('tienda');
 
-class Usuario {
-    constructor(idUsuario, nombre, apellido,direccion, email, provincia, codigoPostal) {
-        this.idUsuario = idUsuario;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-        this.email = email;
-        this.provincia = provincia;
-        this.codigoPostal = codigoPostal;
-    }
-}
 class Productos {
     constructor(idProducto, nombre, precio, imagen,stock,cantidad) {
         this.idProducto = idProducto;
@@ -34,15 +23,12 @@ class Productos {
         this.precio = this.precio * 1.21;
     }
 }
-tienda.push(new Productos("01", "Macarrons", "250", "../imagenes/macarrones.jpeg", 20,0 ));
-tienda.push(new Productos("02", "Pavlova", "1500", "../imagenes/pavlova.jpeg",10));
-tienda.push(new Productos("03", "Torta Kit Kat", "1200", "../imagenes/torta_colores.jpeg", 3));
-tienda.push(new Productos("04", "Tabletas", "300","../imagenes/tabletas.jpeg",15));
-for (const Productos of tienda) {
-    Productos.sumaIva();
-}
+$.getJSON('http://127.0.0.1:5501/js/stock.json', function(datita){
+    datita.forEach(element => tienda.push(element) );
+    mostrarProductos();
+})
 
-
+function mostrarProductos(){
 for (const producto of tienda) {
     $('#tienda').append(`
     <div class="card" style="width: 18rem;" >
@@ -55,6 +41,7 @@ for (const producto of tienda) {
     </div>
     `)
     document.getElementById(`${producto.idProducto}`).addEventListener('click', () => comprarProductos(producto));
+}
 }
 
 function comprarProductos(producto) {
@@ -75,7 +62,7 @@ function comprarProductos(producto) {
     const compraTotal = document.getElementById('compraTotal');
     compraTotal.innerHTML = total;
     localStorage.setItem('carrito', JSON.stringify(carrito));
-
+    mostrarProductos();
 }
 
 function cargarLocalStorage() {
@@ -94,7 +81,6 @@ function cargarLocalStorage() {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
 }
-cargarLocalStorage();
-
+cargarLocalStorage(); 
 
 

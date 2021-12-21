@@ -1,0 +1,34 @@
+[
+{
+    "idProductos": 1,
+    "nombre": "Macarrons", 
+    "precio": 250,
+    "imagen":"../imagenes/macarrones.jpeg",
+    "stock": 20,
+    "catidad": 0
+},
+{
+    "idProductos": 2,
+    "nombre": "Pavlova",
+    "precio": 1500,
+    "imagen": "../imagenes/pavlova.jpeg",
+    "stock": 10,
+    "catidad": 0
+},
+{
+    "idProductos": 3,
+    "nombre": "Torta Kit Kat",
+    "precio": 1200,
+    "imagen": "../imagenes/torta_colores.jpeg",
+    "stock": 20,
+    "catidad": 0
+},
+{
+    "idProductos": 4,
+    "nombre": "Tabletas",
+    "precio": 300,
+    "imagen": "../imagenes/tabletas.jpeg",
+    "stock": 20,
+    "catidad": 0
+}
+]
